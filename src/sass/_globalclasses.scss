@@ -1,0 +1,31 @@
+.is-active-btn {
+	color: rgb(21, 209, 21);
+
+	&:hover {
+		color: rgb(15, 145, 15);	
+	}
+}
+
+.fa-arrow-right {
+	position: absolute;
+	right: 25px;
+	top: 45%;
+	padding: 0.5em;
+	border: 1px solid grey;
+	border-radius: 50%;
+	font-size: 3rem;
+	cursor: pointer;
+	transition: transform .5s;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+.slide-out {
+	left: -150%;
+}
+
+.slide-in {
+	left: 50%;
+}

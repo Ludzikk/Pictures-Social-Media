@@ -1,0 +1,28 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	background: rgb(232, 231, 244);
+	background: linear-gradient(
+		90deg,
+		rgba(232, 231, 244, 1) 0%,
+		rgba(238, 228, 228, 1) 66%,
+		rgba(217, 228, 238, 1) 100%
+	);
+}
+
+body,
+a,
+button {
+	font-family: "Open Sans", sans-serif;
+}
+
+html {
+	font-size: 62.5%;
+}

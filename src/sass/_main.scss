@@ -1,0 +1,138 @@
+.main {
+	display: flex;
+	justify-content: center;
+	max-width: 1250px;
+	width: 100%;
+	max-height: 750px;
+	height: 100%;
+	margin: 0 1em;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	border-radius: 15px;
+	overflow: hidden;
+	transition: left 3s;
+
+	&__left {
+		width: 65%;
+	}
+
+	&__right {
+		width: 35%;
+	}
+
+	&__left,
+	&__right {
+		background-color: rgb(248, 247, 247);
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__top {
+        display: flex;
+		height: 10%;
+        box-shadow: rgba(107, 107, 107, 0.35) 0px 1px 15px;
+
+        &-container {
+            display: flex;
+            align-items: center;
+        }
+	}
+
+	&__mid {
+		display: flex;
+		flex-direction: column;
+		height: 65%;
+		overflow: hidden;
+		overflow-y: scroll;
+	}
+
+	&__bottom {
+		height: 25%;
+        padding: 0.75em;
+        box-shadow: rgba(107, 107, 107, 0.35) 0px 1px 15px;
+	}
+
+	&__username {
+		padding: 0.3em 0.5em;
+		font-size: 2.6em;
+	}
+    
+	&__follow {
+        font-size: 1.7rem;
+        border: none;
+		background-color: transparent;
+        cursor: pointer;
+	}
+
+    &__btn {
+        margin: 0 1em 0 0;
+        padding: 0.5em;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        transition: color 0.25s;
+
+        &:hover {
+            color: rgb(84, 84, 84);
+        }
+    }
+
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+	}
+
+    &__icon {
+        font-size: 3rem;
+    }
+
+	&__likes {
+		font-size: 1.9rem;
+	}
+
+	&__date {
+		font-size: 1.7rem;
+	}
+
+	&__info {
+		padding: 1em 0;
+	}
+
+	&__input {
+		padding: 0.5em 0.2em;
+		width: 100%;
+		font-size: 1.8rem;
+		border-radius: 10px;
+	}
+}
+
+.comment {
+	display: flex;
+	align-items: center;
+	padding: 0.75em;
+
+	&__img {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+	}
+
+	&__left {
+		padding-right: 0.9em;
+	}
+
+	&__nickname {
+		font-size: 1.8rem;
+	}
+
+	&__content {
+		font-size: 1.5rem;
+	}
+}
