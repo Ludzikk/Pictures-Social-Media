@@ -4,9 +4,11 @@ const likes = document.querySelector(".likes");
 const nextBtn = document.querySelector(".fa-arrow-right");
 const main = document.querySelector(".main");
 const input = document.querySelector(".main__input");
+const followBtn = document.querySelector(".main__follow");
 const usernames = [];
 const messages = ["Giga", "W", "Nice", "Look good", "Bomba"];
 const commentsBox = document.querySelector(".main__mid");
+const commentBtn = document.querySelector(".fa-comment");
 const btn = document.querySelectorAll(".main__btn--canactivate");
 const request = fetch("https://randomuser.me/api/?results=25")
 	.then((response) => response.json())
@@ -21,6 +23,7 @@ const request = fetch("https://randomuser.me/api/?results=25")
 let photoSize = 750;
 let avatarSize = 50;
 let clickable = 0;
+let following = 0;
 let orderOfComment = 1;
 
 const createImage = () => {
@@ -118,6 +121,16 @@ const activateBtn = () => {
 	btn.classlist.add("is-active-btn");
 };
 
+const toggleFollow = () => {
+	if (following === 0) {
+		following = 1;
+		followBtn.textContent = "Following";
+	} else if (following === 1) {
+		following = 0;
+		followBtn.textContent = "Follow";
+	}
+};
+
 btn.forEach((item) => {
 	item.addEventListener("click", () => {
 		item.classList.toggle("is-active-btn");
@@ -181,3 +194,9 @@ document.addEventListener("keydown", (event) => {
 		createUserComment();
 	}
 });
+
+followBtn.addEventListener("click", toggleFollow);
+
+commentBtn.addEventListener("click", () => {
+	input.focus();
+})

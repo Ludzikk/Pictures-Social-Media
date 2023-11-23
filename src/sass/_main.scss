@@ -50,7 +50,7 @@
 		flex-direction: column;
 		height: 65%;
 		overflow: hidden;
-		overflow-y: scroll;
+		overflow-y: auto;
 	}
 
 	&__bottom {
@@ -69,6 +69,11 @@
         border: none;
 		background-color: transparent;
         cursor: pointer;
+		transition: color .3s;
+		
+		&:hover {
+			color: rgb(0, 162, 255)
+		}
 	}
 
     &__btn {
